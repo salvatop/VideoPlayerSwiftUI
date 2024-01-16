@@ -24,8 +24,8 @@ struct VideoPlayerView: View {
             } else {
                 ZStack {
                     CustomVideoPlayerView(videoUrls: viewModel.videoUrlList,
-                                          isPlaying: $isPlaying,
-                                          currentIndex: $currentIndex)
+                                          currentIndex: $currentIndex, 
+                                          isPlaying: $isPlaying)
                     .frame(height: 220)
                     .onTapGesture {
                         showControlsOverlay = true

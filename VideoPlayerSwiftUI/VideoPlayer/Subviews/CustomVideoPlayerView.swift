@@ -5,15 +5,33 @@ import AVFoundation
 struct CustomVideoPlayerView: UIViewControllerRepresentable {
     var videoUrls: [URL]
 
-    @Binding var isPlaying: Bool
     @Binding var currentIndex: Int
-    
+    @Binding var isPlaying: Bool
+
     final class Coordinator {
         var player: AVPlayer
 
         init(player: AVPlayer) {
             self.player = player
         }
+
+        deinit {
+            NotificationCenter.default.removeObserver(self)
+        }
+    }
+
+    private func addObserver(object: Any, player: AVPlayer) {
+        NotificationCenter.default.addObserver(forName: .AVPlayerItemDidPlayToEndTime,
+                                               object: object,
+                                               queue: .main) { _ in
+            resetAndPause(player: player)
+        }
+    }
+
+    private func resetAndPause(player: AVPlayer) {
+        player.seek(to: .zero)
+        player.pause()
+        isPlaying = false
     }
 
     func makeCoordinator() -> Coordinator {
@@ -21,7 +39,11 @@ struct CustomVideoPlayerView: UIViewControllerRepresentable {
             let placeholderUrl = URL(string: "https://example.com/placeholder")!
             return Coordinator(player: AVPlayer(url: placeholderUrl))
         }
-        let coordinator = Coordinator(player: AVPlayer(url: videoUrls[0]))
+        let coordinator = Coordinator(player: AVPlayer(url: videoUrls[currentIndex]))
+
+        if let currentItem = coordinator.player.currentItem {
+            addObserver(object: currentItem, player: coordinator.player)
+        }
         return coordinator
     }
 
@@ -53,6 +75,10 @@ struct CustomVideoPlayerView: UIViewControllerRepresentable {
 
             let newPlayerItem = AVPlayerItem(url: videoUrls[currentIndex])
             avPlayer.replaceCurrentItem(with: newPlayerItem)
+
+            NotificationCenter.default.removeObserver(self, name: .AVPlayerItemDidPlayToEndTime, object: avPlayer)
+
+            addObserver(object: newPlayerItem, player: avPlayer)
         }
         isPlaying ? avPlayer.play() : avPlayer.pause()
     }
