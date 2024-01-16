@@ -15,7 +15,7 @@ final class VideoPlayerSwiftUITests: XCTestCase {
 
     override func setUpWithError() throws {
         mockNetworkManager = MockNetworkManager()
-        viewModel = VideoPlayerViewModel(networkManager: mockNetworkManager as! NetworkManagerProtocol)
+        viewModel = VideoPlayerViewModel(networkManager: mockNetworkManager)
     }
 
     override func tearDownWithError() throws {
