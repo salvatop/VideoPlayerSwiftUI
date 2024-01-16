@@ -42,7 +42,7 @@ struct VideoPlayerView: View {
                 }
                 .edgesIgnoringSafeArea(.all)
                 VStack {
-                    VideoDetailsView(videoList: viewModel.videoUrlList)
+                    VideoDetailsView(currentIndex: $currentIndex, videoList: viewModel.videoList)
                 }
             }
         }
