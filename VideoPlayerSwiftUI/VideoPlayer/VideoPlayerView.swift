@@ -21,8 +21,11 @@ struct VideoPlayerView: View {
             .edgesIgnoringSafeArea(.all)
             VStack {
                 HStack{
-                    Text("Description")
-                    Spacer()
+                    ScrollView {
+                        VideoDetailsView(videoList: videoUrls)
+                        Spacer()
+                    }
+                    .background(Color.white)
                 }
                 .padding()
                 Spacer()

@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		32217EAC2B56DE54005ADBE6 /* CustomVideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32217EAB2B56DE54005ADBE6 /* CustomVideoPlayerView.swift */; };
+		32217EAE2B56E0CE005ADBE6 /* VideoDetailsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32217EAD2B56E0CE005ADBE6 /* VideoDetailsView.swift */; };
 		3AF67A5C25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF67A5B25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift */; };
 		3AF67A5E25A64DBD00D360A7 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF67A5D25A64DBD00D360A7 /* VideoPlayerView.swift */; };
 		3AF67A6025A64DBF00D360A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AF67A5F25A64DBF00D360A7 /* Assets.xcassets */; };
@@ -35,6 +36,7 @@
 
 /* Begin PBXFileReference section */
 		32217EAB2B56DE54005ADBE6 /* CustomVideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomVideoPlayerView.swift; sourceTree = "<group>"; };
+		32217EAD2B56E0CE005ADBE6 /* VideoDetailsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoDetailsView.swift; sourceTree = "<group>"; };
 		3AF67A5825A64DBD00D360A7 /* VideoPlayerSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayerSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AF67A5B25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerSwiftUIApp.swift; sourceTree = "<group>"; };
 		3AF67A5D25A64DBD00D360A7 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 			isa = PBXGroup;
 			children = (
 				32217EAB2B56DE54005ADBE6 /* CustomVideoPlayerView.swift */,
+				32217EAD2B56E0CE005ADBE6 /* VideoDetailsView.swift */,
 			);
 			path = Subviews;
 			sourceTree = "<group>";
@@ -279,6 +282,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AF67A5E25A64DBD00D360A7 /* VideoPlayerView.swift in Sources */,
+				32217EAE2B56E0CE005ADBE6 /* VideoDetailsView.swift in Sources */,
 				3AF67A5C25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift in Sources */,
 				32217EAC2B56DE54005ADBE6 /* CustomVideoPlayerView.swift in Sources */,
 			);
