@@ -1,6 +1,7 @@
 import Foundation
 import OSLog
 
+
 final class VideoPlayerViewModel: ObservableObject {
     private var networkManager: NetworkManagerProtocol
 
@@ -40,8 +41,12 @@ final class VideoPlayerViewModel: ObservableObject {
         DispatchQueue.main.async { [weak self] in
             guard let strongSelf = self else { return }
 
-            strongSelf.videoList = videos
-            strongSelf.videoUrlList = videos.compactMap { URL(string: $0.hlsURL) }
+            let sortedVideos = videos.sorted { $0.publishedAt < $1.publishedAt }
+
+            let videoURLs = sortedVideos.compactMap { URL(string: $0.hlsURL) }
+
+            strongSelf.videoList = sortedVideos
+            strongSelf.videoUrlList = videoURLs
             strongSelf.isLoading = false
         }
     }
