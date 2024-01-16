@@ -24,7 +24,12 @@ struct VideoPlayerView: View {
                 ZStack {
                     CustomVideoPlayerView(videoUrls: viewModel.videoUrlList)
                     .frame(height: 220)
-
+                    .onTapGesture {
+                        showControlsOverlay = true
+                        Timer.scheduledTimer(withTimeInterval: 6.0, repeats: false) { _ in
+                            if isPlaying { showControlsOverlay = false }
+                        }
+                    }
                     if showControlsOverlay {
                         VideoPlayerControlsView(isPlaying: $isPlaying,
                                                 showControlsOverlay: $showControlsOverlay,
