@@ -5,6 +5,8 @@ import AVFoundation
 struct CustomVideoPlayerView: UIViewControllerRepresentable {
     var videoUrls: [URL]
 
+    @Binding var isPlaying: Bool
+
     final class Coordinator {
         var player: AVPlayer
 
@@ -37,5 +39,11 @@ struct CustomVideoPlayerView: UIViewControllerRepresentable {
         return viewController
     }
 
-    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {}
+    func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
+        guard
+            let avPlayerViewController = uiViewController.children.first as? AVPlayerViewController,
+            let avPlayer = avPlayerViewController.player else { return }
+
+        isPlaying ? avPlayer.play() : avPlayer.pause()
+    }
 }
