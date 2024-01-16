@@ -1,0 +1,16 @@
+PODS:
+  - MarkdownKit (1.7.1)
+
+DEPENDENCIES:
+  - MarkdownKit
+
+SPEC REPOS:
+  https://github.com/cocoapods/specs.git:
+    - MarkdownKit
+
+SPEC CHECKSUMS:
+  MarkdownKit: 0b15195c63cf3e39387949c4bdeccde0055e252a
+
+PODFILE CHECKSUM: 93e318e2305afa99de86c69164731ef944a421a1
+
+COCOAPODS: 1.5.2
