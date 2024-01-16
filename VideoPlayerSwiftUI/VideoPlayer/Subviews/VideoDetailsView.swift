@@ -11,7 +11,7 @@ struct VideoDetailsView: View {
                 VStack(alignment: .leading) {
                     if videoList.isEmpty {
                         Text("No Video Available")
-                            .font(.title)
+                            .customFont(26)
                     } else {
                         let title = "## \(videoList[currentIndex].title)\n"
                         let author = "\(videoList[currentIndex].author.name)\n\n"

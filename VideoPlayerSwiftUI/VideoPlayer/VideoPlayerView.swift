@@ -17,7 +17,7 @@ struct VideoPlayerView: View {
     var body: some View {
         VStack {
             Text("Video Player")
-                .font(.title)
+                .customFont(26)
             if viewModel.isLoading {
                 ProgressView()
                     .progressViewStyle(CircularProgressViewStyle())
