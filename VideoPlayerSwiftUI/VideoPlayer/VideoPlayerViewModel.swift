@@ -1,5 +1,5 @@
 import Foundation
-
+import OSLog
 
 final class VideoPlayerViewModel: ObservableObject {
     private var networkManager: NetworkManagerProtocol
@@ -50,6 +50,6 @@ final class VideoPlayerViewModel: ObservableObject {
         DispatchQueue.main.async { [weak self] in
             self?.isLoading = false
         }
-        print("Fetch data request failed: \(error.localizedDescription)")
+        Logger.network.log("Fetch data request failed: \(error.localizedDescription)")
     }
 }

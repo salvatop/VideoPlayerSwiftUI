@@ -13,6 +13,7 @@
 		32217EB42B56E3EF005ADBE6 /* Endpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32217EB32B56E3EF005ADBE6 /* Endpoint.swift */; };
 		32217EB62B56E481005ADBE6 /* NetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32217EB52B56E481005ADBE6 /* NetworkManager.swift */; };
 		32217EB92B56E8B8005ADBE6 /* VideoPlayerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32217EB82B56E8B8005ADBE6 /* VideoPlayerViewModel.swift */; };
+		32217EBC2B56E990005ADBE6 /* Logger.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32217EBB2B56E990005ADBE6 /* Logger.swift */; };
 		3AF67A5C25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF67A5B25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift */; };
 		3AF67A5E25A64DBD00D360A7 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF67A5D25A64DBD00D360A7 /* VideoPlayerView.swift */; };
 		3AF67A6025A64DBF00D360A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AF67A5F25A64DBF00D360A7 /* Assets.xcassets */; };
@@ -45,6 +46,7 @@
 		32217EB32B56E3EF005ADBE6 /* Endpoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Endpoint.swift; sourceTree = "<group>"; };
 		32217EB52B56E481005ADBE6 /* NetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkManager.swift; sourceTree = "<group>"; };
 		32217EB82B56E8B8005ADBE6 /* VideoPlayerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerViewModel.swift; sourceTree = "<group>"; };
+		32217EBB2B56E990005ADBE6 /* Logger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Logger.swift; sourceTree = "<group>"; };
 		3AF67A5825A64DBD00D360A7 /* VideoPlayerSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayerSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AF67A5B25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerSwiftUIApp.swift; sourceTree = "<group>"; };
 		3AF67A5D25A64DBD00D360A7 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
@@ -120,6 +122,14 @@
 			path = Network;
 			sourceTree = "<group>";
 		};
+		32217EBA2B56E97B005ADBE6 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				32217EBB2B56E990005ADBE6 /* Logger.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		3AF67A4F25A64DBD00D360A7 = {
 			isa = PBXGroup;
 			children = (
@@ -143,6 +153,7 @@
 		3AF67A5A25A64DBD00D360A7 /* VideoPlayerSwiftUI */ = {
 			isa = PBXGroup;
 			children = (
+				32217EBA2B56E97B005ADBE6 /* Extensions */,
 				32217EAF2B56E375005ADBE6 /* Model */,
 				32217EB22B56E3DC005ADBE6 /* Network */,
 				32217EA92B56DE21005ADBE6 /* VideoPlayer */,
@@ -313,6 +324,7 @@
 				3AF67A5E25A64DBD00D360A7 /* VideoPlayerView.swift in Sources */,
 				32217EAE2B56E0CE005ADBE6 /* VideoDetailsView.swift in Sources */,
 				32217EB62B56E481005ADBE6 /* NetworkManager.swift in Sources */,
+				32217EBC2B56E990005ADBE6 /* Logger.swift in Sources */,
 				3AF67A5C25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift in Sources */,
 				32217EB92B56E8B8005ADBE6 /* VideoPlayerViewModel.swift in Sources */,
 				32217EB42B56E3EF005ADBE6 /* Endpoint.swift in Sources */,
