@@ -1,6 +1,6 @@
 import Foundation
 
-class MockNetworkManager: NetworkManagerProtocol {
+final class MockNetworkManager: NetworkManagerProtocol {
     var sendRequestResult: Result<[Video], NetworkManager.ApiError>?
 
     func sendHTTPRequest(urlString: String, dataModel: Decodable.Type) async throws -> Result<[Video], NetworkManager.ApiError> {
