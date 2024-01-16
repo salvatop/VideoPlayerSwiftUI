@@ -21,6 +21,7 @@ struct VideoPlayerView: View {
             if viewModel.isLoading {
                 ProgressView()
                     .progressViewStyle(CircularProgressViewStyle())
+                    .accessibility(label: Text(AppStrings.loading))
             } else {
                 ZStack {
                     CustomVideoPlayerView(videoUrls: viewModel.videoUrlList,
@@ -33,6 +34,7 @@ struct VideoPlayerView: View {
                             if isPlaying { showControlsOverlay = false }
                         }
                     }
+                    .accessibility(hint: Text(AppStrings.showPlayerControlAccessebilityLabel))
                     if showControlsOverlay {
                         VideoPlayerControlsView(currentIndex: $currentIndex,
                                                 isPlaying: $isPlaying,

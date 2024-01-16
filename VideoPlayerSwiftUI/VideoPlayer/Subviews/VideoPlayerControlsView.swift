@@ -18,6 +18,7 @@ struct VideoPlayerControlsView: View {
                             .foregroundColor(.white)
                             .frame(width: 50, height: 50)
                         Image(AppStrings.previous)
+                            .accessibility(label: Text(AppStrings.previous))
                     }
                 }
                 .disabled(currentIndex == 0)
@@ -30,6 +31,7 @@ struct VideoPlayerControlsView: View {
                             .foregroundColor(.white)
                             .frame(width: 70, height: 70)
                         Image(isPlaying ? AppStrings.pause : AppStrings.play)
+                            .accessibility(label: Text(AppStrings.playPauseAccessebilityLabel))
                     }
                 }
                 .padding()
@@ -41,6 +43,7 @@ struct VideoPlayerControlsView: View {
                             .foregroundColor(.white)
                             .frame(width: 50, height: 50)
                         Image(AppStrings.next)
+                            .accessibility(label: Text(AppStrings.next))
                     }
                 }
                 .disabled(currentIndex == videoUrlList.count - 1)
