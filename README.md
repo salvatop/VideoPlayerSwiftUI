@@ -8,7 +8,7 @@ This is a SwiftUI-based video player app that allows users to play a list of vid
 
 ## Features
 
-- Fetch alist of videos from an API
+- Fetch a list of videos from an API
 - Play videos from a playlist
 - Navigate between videos in the playlist
 - Automatic pause and reset when a video finishes
