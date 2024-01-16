@@ -10,6 +10,8 @@ import SwiftUI
 struct VideoPlayerView: View {
     @EnvironmentObject var viewModel: VideoPlayerViewModel
 
+    @State private var isPlaying: Bool = false
+    @State private var showControlsOverlay: Bool = true
 
     var body: some View {
         VStack {
@@ -22,6 +24,12 @@ struct VideoPlayerView: View {
                 ZStack {
                     CustomVideoPlayerView(videoUrls: viewModel.videoUrlList)
                     .frame(height: 220)
+
+                    if showControlsOverlay {
+                        VideoPlayerControlsView(isPlaying: $isPlaying,
+                                                showControlsOverlay: $showControlsOverlay,
+                                                videoUrlList: viewModel.videoUrlList)
+                    }
                 }
                 .edgesIgnoringSafeArea(.all)
                 VStack {
