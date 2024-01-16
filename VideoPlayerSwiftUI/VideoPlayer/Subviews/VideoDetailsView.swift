@@ -13,8 +13,10 @@ struct VideoDetailsView: View {
                         Text("No Video Available")
                             .font(.title)
                     } else {
+                        let title = "## \(videoList[currentIndex].title)\n"
+                        let author = "\(videoList[currentIndex].author.name)\n\n"
                         let description = videoList[currentIndex].description
-                        MarkdownView(markdown:description)
+                        MarkdownView(markdown: title + author + description)
                     }
                 }
                 .padding()
