@@ -10,6 +10,7 @@ import SwiftUI
 struct VideoPlayerView: View {
     @EnvironmentObject var viewModel: VideoPlayerViewModel
 
+    @State private var currentIndex: Int = 0
     @State private var isPlaying: Bool = false
     @State private var showControlsOverlay: Bool = true
 
@@ -31,7 +32,8 @@ struct VideoPlayerView: View {
                         }
                     }
                     if showControlsOverlay {
-                        VideoPlayerControlsView(isPlaying: $isPlaying,
+                        VideoPlayerControlsView(currentIndex: $currentIndex,
+                                                isPlaying: $isPlaying,
                                                 showControlsOverlay: $showControlsOverlay,
                                                 videoUrlList: viewModel.videoUrlList)
                     }
