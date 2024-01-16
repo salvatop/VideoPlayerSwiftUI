@@ -36,7 +36,7 @@ struct CustomVideoPlayerView: UIViewControllerRepresentable {
 
     func makeCoordinator() -> Coordinator {
         if videoUrls.isEmpty {
-            let placeholderUrl = URL(string: "https://example.com/placeholder")!
+            let placeholderUrl = URL(string: AppStrings.placeholderUrl)!
             return Coordinator(player: AVPlayer(url: placeholderUrl))
         }
         let coordinator = Coordinator(player: AVPlayer(url: videoUrls[currentIndex]))
@@ -51,8 +51,10 @@ struct CustomVideoPlayerView: UIViewControllerRepresentable {
         let viewController = UIViewController()
         let playerViewController = AVPlayerViewController()
         playerViewController.player = makeCoordinator().player
-        playerViewController.showsPlaybackControls = true
+        playerViewController.showsPlaybackControls = false
         playerViewController.player?.automaticallyWaitsToMinimizeStalling = true
+        playerViewController.view.accessibilityLabel = AppStrings.title
+        playerViewController.view.accessibilityTraits = .playsSound
 
         viewController.addChild(playerViewController)
         viewController.view.addSubview(playerViewController.view)

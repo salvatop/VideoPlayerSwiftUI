@@ -1,0 +1,10 @@
+"title" = "Video Player";
+"no_video_available" = "No Video Available";
+"loading_accessebility_label" = "loading";
+"video_details_accessebility_label" = "video details";
+"show_player_control_accessebility_label" = "Tap to show/hide controls";
+"play_pause_button_accessebility_label" = "Play or pause the video";
+"next" = "next";
+"play" = "play";
+"pause" = "pause";
+"previous" = "previous";

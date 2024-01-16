@@ -18,6 +18,8 @@
 		32217EC42B56FB2F005ADBE6 /* MockNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32217EC32B56FB2F005ADBE6 /* MockNetworkManager.swift */; };
 		32217EC72B56FFF7005ADBE6 /* Text.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32217EC62B56FFF7005ADBE6 /* Text.swift */; };
 		32217EC92B570019005ADBE6 /* Handlee-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 32217EC82B570019005ADBE6 /* Handlee-Regular.ttf */; };
+		32217ECB2B570138005ADBE6 /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 32217ECA2B570138005ADBE6 /* Localizable.strings */; };
+		32217ECD2B570154005ADBE6 /* AppStrings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 32217ECC2B570154005ADBE6 /* AppStrings.swift */; };
 		3AF67A5C25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF67A5B25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift */; };
 		3AF67A5E25A64DBD00D360A7 /* VideoPlayerView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3AF67A5D25A64DBD00D360A7 /* VideoPlayerView.swift */; };
 		3AF67A6025A64DBF00D360A7 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3AF67A5F25A64DBF00D360A7 /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 		32217EC32B56FB2F005ADBE6 /* MockNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MockNetworkManager.swift; sourceTree = "<group>"; };
 		32217EC62B56FFF7005ADBE6 /* Text.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Text.swift; sourceTree = "<group>"; };
 		32217EC82B570019005ADBE6 /* Handlee-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Handlee-Regular.ttf"; sourceTree = "<group>"; };
+		32217ECA2B570138005ADBE6 /* Localizable.strings */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; path = Localizable.strings; sourceTree = "<group>"; };
+		32217ECC2B570154005ADBE6 /* AppStrings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppStrings.swift; sourceTree = "<group>"; };
 		3AF67A5825A64DBD00D360A7 /* VideoPlayerSwiftUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = VideoPlayerSwiftUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		3AF67A5B25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerSwiftUIApp.swift; sourceTree = "<group>"; };
 		3AF67A5D25A64DBD00D360A7 /* VideoPlayerView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VideoPlayerView.swift; sourceTree = "<group>"; };
@@ -195,6 +199,8 @@
 				32217EC52B56FFB8005ADBE6 /* Fonts */,
 				3AF67A6425A64DBF00D360A7 /* Info.plist */,
 				3AF67A6125A64DBF00D360A7 /* Preview Content */,
+				32217ECA2B570138005ADBE6 /* Localizable.strings */,
+				32217ECC2B570154005ADBE6 /* AppStrings.swift */,
 			);
 			path = VideoPlayerSwiftUI;
 			sourceTree = "<group>";
@@ -349,6 +355,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3AF67A6325A64DBF00D360A7 /* Preview Assets.xcassets in Resources */,
+				32217ECB2B570138005ADBE6 /* Localizable.strings in Resources */,
 				32217EC92B570019005ADBE6 /* Handlee-Regular.ttf in Resources */,
 				3AF67A6025A64DBF00D360A7 /* Assets.xcassets in Resources */,
 			);
@@ -420,6 +427,7 @@
 				32217EAE2B56E0CE005ADBE6 /* VideoDetailsView.swift in Sources */,
 				32217EB62B56E481005ADBE6 /* NetworkManager.swift in Sources */,
 				32217EBC2B56E990005ADBE6 /* Logger.swift in Sources */,
+				32217ECD2B570154005ADBE6 /* AppStrings.swift in Sources */,
 				3AF67A5C25A64DBD00D360A7 /* VideoPlayerSwiftUIApp.swift in Sources */,
 				32217EB92B56E8B8005ADBE6 /* VideoPlayerViewModel.swift in Sources */,
 				32217EB42B56E3EF005ADBE6 /* Endpoint.swift in Sources */,

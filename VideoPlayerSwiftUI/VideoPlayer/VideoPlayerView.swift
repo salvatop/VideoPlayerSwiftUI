@@ -16,7 +16,7 @@ struct VideoPlayerView: View {
 
     var body: some View {
         VStack {
-            Text("Video Player")
+            Text(AppStrings.title)
                 .customFont(26)
             if viewModel.isLoading {
                 ProgressView()
@@ -24,7 +24,7 @@ struct VideoPlayerView: View {
             } else {
                 ZStack {
                     CustomVideoPlayerView(videoUrls: viewModel.videoUrlList,
-                                          currentIndex: $currentIndex, 
+                                          currentIndex: $currentIndex,
                                           isPlaying: $isPlaying)
                     .frame(height: 220)
                     .onTapGesture {

@@ -17,7 +17,7 @@ struct VideoPlayerControlsView: View {
                         Circle()
                             .foregroundColor(.white)
                             .frame(width: 50, height: 50)
-                        Image("previous")
+                        Image(AppStrings.previous)
                     }
                 }
                 .disabled(currentIndex == 0)
@@ -29,7 +29,7 @@ struct VideoPlayerControlsView: View {
                         Circle()
                             .foregroundColor(.white)
                             .frame(width: 70, height: 70)
-                        Image(isPlaying ? "pause" : "play")
+                        Image(isPlaying ? AppStrings.pause : AppStrings.play)
                     }
                 }
                 .padding()
@@ -40,7 +40,7 @@ struct VideoPlayerControlsView: View {
                         Circle()
                             .foregroundColor(.white)
                             .frame(width: 50, height: 50)
-                        Image("next")
+                        Image(AppStrings.next)
                     }
                 }
                 .disabled(currentIndex == videoUrlList.count - 1)
