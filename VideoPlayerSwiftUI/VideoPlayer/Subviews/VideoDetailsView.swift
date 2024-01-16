@@ -17,6 +17,7 @@ struct VideoDetailsView: View {
                         let author = "\(videoList[currentIndex].author.name)\n\n"
                         let description = videoList[currentIndex].description
                         MarkdownView(markdown: title + author + description)
+                            .accessibilityLabel(AppStrings.videoDetailsAccessebilityLabel)
                     }
                 }
                 .padding()
