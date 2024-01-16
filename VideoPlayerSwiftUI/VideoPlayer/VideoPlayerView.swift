@@ -23,7 +23,9 @@ struct VideoPlayerView: View {
                     .progressViewStyle(CircularProgressViewStyle())
             } else {
                 ZStack {
-                    CustomVideoPlayerView(videoUrls: viewModel.videoUrlList, isPlaying: $isPlaying)
+                    CustomVideoPlayerView(videoUrls: viewModel.videoUrlList,
+                                          isPlaying: $isPlaying,
+                                          currentIndex: $currentIndex)
                     .frame(height: 220)
                     .onTapGesture {
                         showControlsOverlay = true

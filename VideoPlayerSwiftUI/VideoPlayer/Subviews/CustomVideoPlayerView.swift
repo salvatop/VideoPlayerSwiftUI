@@ -6,7 +6,8 @@ struct CustomVideoPlayerView: UIViewControllerRepresentable {
     var videoUrls: [URL]
 
     @Binding var isPlaying: Bool
-
+    @Binding var currentIndex: Int
+    
     final class Coordinator {
         var player: AVPlayer
 
@@ -42,8 +43,17 @@ struct CustomVideoPlayerView: UIViewControllerRepresentable {
     func updateUIViewController(_ uiViewController: UIViewController, context: Context) {
         guard
             let avPlayerViewController = uiViewController.children.first as? AVPlayerViewController,
-            let avPlayer = avPlayerViewController.player else { return }
+            let avPlayer = avPlayerViewController.player,
+            !videoUrls.isEmpty
+        else { return }
 
+        if let currentItem = avPlayer.currentItem,
+           let currentUrl = (currentItem.asset as? AVURLAsset)?.url,
+           currentUrl != videoUrls[currentIndex] {
+
+            let newPlayerItem = AVPlayerItem(url: videoUrls[currentIndex])
+            avPlayer.replaceCurrentItem(with: newPlayerItem)
+        }
         isPlaying ? avPlayer.play() : avPlayer.pause()
     }
 }
