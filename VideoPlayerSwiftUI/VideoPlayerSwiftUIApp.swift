@@ -11,7 +11,9 @@ import SwiftUI
 struct VideoPlayerSwiftUIApp: App {
     var body: some Scene {
         WindowGroup {
+            let viewModel = VideoPlayerViewModel(networkManager: NetworkManager())
             VideoPlayerView()
+                .environmentObject(viewModel)
         }
     }
 }

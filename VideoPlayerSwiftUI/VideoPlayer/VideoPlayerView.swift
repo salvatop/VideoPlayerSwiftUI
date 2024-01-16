@@ -9,20 +9,21 @@ import SwiftUI
 import AVKit
 
 struct VideoPlayerView: View {
-    let videoUrls = [URL(string: "https://d140vvwqovffrf.cloudfront.net/media/5e87b9a811599/hls/index.m3u8")!]
+    @EnvironmentObject var viewModel: VideoPlayerViewModel
+    
     var body: some View {
         VStack {
             Text("Video Player")
                 .font(.title)
             ZStack {
-                CustomVideoPlayerView(videoUrls: videoUrls)
+                CustomVideoPlayerView(videoUrls: viewModel.videoUrlList)
                     .frame(height: 220)
             }
             .edgesIgnoringSafeArea(.all)
             VStack {
                 HStack{
                     ScrollView {
-                        VideoDetailsView(videoList: videoUrls)
+                        VideoDetailsView(videoList: viewModel.videoUrlList)
                         Spacer()
                     }
                     .background(Color.white)
